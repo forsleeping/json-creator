@@ -1,11 +1,14 @@
 {
   "name": "json-creator",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "Create json data from a template object with ES6 Template Literals.",
+  "bin": "dist/cli.js",
   "main": "dist/index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production babel src --out-dir ./dist",
-    "test": "echo test"
+    "test": "echo test",
+    "patch-release": "npm version patch && npm publish && git push --follow-tags",
+    "deploy": "github-pages-deploy"
   },
   "repository": {
     "type": "git",
@@ -25,6 +28,7 @@
   },
   "homepage": "https://github.com/forsleeping/json-creator#readme",
   "dependencies": {
+    "commander": "^2.20.0",
     "faker": "^4.1.0"
   },
   "devDependencies": {

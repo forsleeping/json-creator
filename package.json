@@ -1,0 +1,36 @@
+{
+  "name": "json-creator",
+  "version": "0.0.2",
+  "description": "Create json data from a template object with ES6 Template Literals.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production babel src --out-dir ./dist",
+    "test": "echo test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/forsleeping/json-creator.git"
+  },
+  "keywords": [
+    "template",
+    "json",
+    "generator",
+    "dev-tool",
+    "template literals"
+  ],
+  "author": "wsysuper",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/forsleeping/json-creator/issues"
+  },
+  "homepage": "https://github.com/forsleeping/json-creator#readme",
+  "dependencies": {
+    "faker": "^4.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "cross-env": "^5.2.0"
+  }
+}

@@ -17,7 +17,7 @@ import program from 'commander';
 import jsonCreator from './index';
 
 program
-    .version('0.0.1')
+    .version('0.0.2')
     .option('-d, --data-context [object]', 'data context', JSON5.parse)
     .option('-m, --method-context [object]', 'method context', JSON5.parse)
     .option(

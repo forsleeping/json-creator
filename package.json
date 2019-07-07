@@ -1,40 +1,45 @@
 {
-  "name": "json-creator",
-  "version": "0.0.1",
-  "description": "Create json data from a template object with ES6 Template Literals.",
-  "bin": "dist/cli.js",
-  "main": "dist/index.js",
-  "scripts": {
-    "build": "cross-env NODE_ENV=production babel src --out-dir ./dist",
-    "test": "echo test",
-    "patch-release": "npm version patch && npm publish && git push --follow-tags",
-    "deploy": "github-pages-deploy"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/forsleeping/json-creator.git"
-  },
-  "keywords": [
-    "template",
-    "json",
-    "generator",
-    "dev-tool",
-    "template literals"
-  ],
-  "author": "wsysuper",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/forsleeping/json-creator/issues"
-  },
-  "homepage": "https://github.com/forsleeping/json-creator#readme",
-  "dependencies": {
-    "commander": "^2.20.0",
-    "faker": "^4.1.0"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
-    "cross-env": "^5.2.0"
-  }
+    "name": "json-creator",
+    "version": "0.0.1",
+    "description": "Create json data from a template object with ES6 Template Literals.",
+    "bin": {
+        "json-creator": "dist/cli.js"
+    },
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "cross-env NODE_ENV=production babel src --out-dir ./dist",
+        "test": "npm-run-all -s build test-no-build",
+        "test-no-build": "ava --verbose",
+        "patch-release": "npm version patch && npm publish && git push --follow-tags"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/forsleeping/json-creator.git"
+    },
+    "keywords": [
+        "template",
+        "json",
+        "generator",
+        "dev-tool",
+        "template literals"
+    ],
+    "author": "wsysuper",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/forsleeping/json-creator/issues"
+    },
+    "homepage": "https://github.com/forsleeping/json-creator#readme",
+    "dependencies": {
+        "commander": "^2.20.0",
+        "faker": "^4.1.0",
+        "json5": "^2.1.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.4.4",
+        "@babel/core": "^7.4.5",
+        "@babel/preset-env": "^7.4.5",
+        "ava": "^2.1.0",
+        "cross-env": "^5.2.0",
+        "npm-run-all": "^4.1.5"
+    }
 }

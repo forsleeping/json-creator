@@ -14,6 +14,8 @@ test('test RANGE', t => {
     t.deepEqual(utilFunctions.RANGE(6, 1, -1), [6, 5, 4, 3, 2]);
     t.deepEqual(utilFunctions.RANGE(6, 1, -2), [6, 4, 2]);
     t.deepEqual(utilFunctions.RANGE(6, 0, -2), [6, 4, 2]);
+    t.deepEqual(utilFunctions.RANGE(3, 3), []);
+    t.deepEqual(utilFunctions.RANGE(3, 1), []);
 });
 
 test('test CHOICE', t => {

@@ -3,7 +3,7 @@
 Generate JSON data from a JSON template.
 Thanks to ES6 Template Literals, we dynamicly evaluate the string parts using the notation `${}`.
 
-This is a useful for generating dummy data for test and demo or generally data processing.
+This is a useful library for dummy data generating or generally data processing.
 
 ### Usage
 

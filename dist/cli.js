@@ -24,8 +24,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 _commander["default"].version(_package.version).option('-d, --data-context [object]', 'data context', _json["default"].parse).option('-m, --method-context [object]', 'method context', _json["default"].parse).option('-n, --data-namespace [namespace]', 'data namespace, default to "_"').option('-g, --method-namespace [namespace]', 'data namespace, default to global context').option('-i, --json-indent [indent]', 'output json indent number', parseInt, 0).option('-l, --list', 'output available util functions').parse(process.argv);
 
 if (_commander["default"].list) {
-  Object.keys(_index.utilFunctions).forEach(function (funcName) {
-    return console.log(funcName);
+  Object.values(_index.utilFunctions).forEach(function (funcBody) {
+    return console.log("".concat(funcBody.toString().split('\n')[0], "...}"));
   });
   process.exit(0);
 }

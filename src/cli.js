@@ -27,7 +27,9 @@ program
     .parse(process.argv);
 
 if (program.list) {
-    Object.keys(utilFunctions).forEach(funcName => console.log(funcName));
+    Object.values(utilFunctions).forEach(funcBody =>
+        console.log(`${funcBody.toString().split('\n')[0]}...}`)
+    );
     process.exit(0);
 }
 

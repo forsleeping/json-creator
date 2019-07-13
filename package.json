@@ -1,6 +1,6 @@
 {
     "name": "json-creator",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Create json data from a template object with ES6 Template Literals.",
     "bin": {
         "json-creator": "dist/cli.js"
